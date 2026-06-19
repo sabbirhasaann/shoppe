@@ -31,7 +31,178 @@ class AppTextFormField extends StatelessWidget {
   // ==========================================
 
   // Defines the input visual borders, icons, hints, labels, and error text themes.
-  final InputDecoration? decoration;
+  // final InputDecoration? decoration;
+
+  //------------------------------
+  //Input Decoration Class Started
+  //------------------------------
+
+  // An icon that appears outside the main input field container, positioned at the start.
+  final Widget? icon;
+
+  // The color applied strictly to the prefix icon displayed outside the field.
+  final Color? iconColor;
+
+  // An optional custom widget to display as an animated label instead of raw string text.
+  //
+  final Widget? label;
+
+  // The simple string text used for the field's placeholder description or floating title.
+  final String? labelText;
+
+  // The text style configurations applied to the label text when it rests inside the field.
+  final TextStyle? labelStyle;
+
+  // The text style specifications applied to the label text when it floats up to the border.
+  final TextStyle? floatingLabelStyle;
+
+  // An optional custom widget to display persistent helper info below the input box area.
+  final Widget? helper;
+
+  // A descriptive inline text string positioned underneath the field text container.
+  final String? helperText;
+
+  // The style rules applied to customize the look of the helper description beneath the field.
+  final TextStyle? helperStyle;
+
+  // Sets the maximum line breaks allowed for rendering the helper info layout safely.
+  final int? helperMaxLines;
+
+  // A template descriptive text string shown inside the field before the user begins typing.
+  final String? hintText;
+
+  // An optional custom widget to render inside the field as a placeholder instead of string text.
+  final Widget? hint;
+
+  // The font style layout specifications applied to the hint text placeholder.
+  final TextStyle? hintStyle;
+
+  // Forces the directionality of the placeholder hint text (LTR or RTL).
+  final TextDirection? hintTextDirection;
+
+  // The total row vertical limit the hint text is permitted to span before truncation.
+  final int? hintMaxLines;
+
+  // The animation time duration it takes for the placeholder text to fade when typing begins.
+  final Duration? hintFadeDuration;
+
+  // Dictates whether layout height remains reserved for hints when content text is present.
+  final bool maintainHintHeight;
+
+  // Dictates whether layout sizing dimensions are reserved for hints when content text is present.
+  final bool maintainHintSize;
+
+  // Keeps field space reserved for the floating label even when it is not currently visible.
+  final bool maintainLabelSize;
+
+  // A completely custom error display widget to show beneath the field boundary box.
+  final Widget? error;
+
+  // The text string displayed underneath the input box when form validation checks fail.
+  final String? errorText;
+
+  // Typography guidelines applied to color, size, and layout properties of the error message text.
+  final TextStyle? errorStyle;
+
+  // The vertical row limit the validation text block can consume before clipping.
+  final int? errorMaxLines;
+
+  // Determines whether the label stays inside, floats up on focus, or never shifts upward.
+  final FloatingLabelBehavior? floatingLabelBehavior;
+
+  // Configures the horizontal orientation alignment of the floating label along the top border line.
+  final FloatingLabelAlignment? floatingLabelAlignment;
+
+  // Minimizes the internal height wrapper padding parameters to form a tight, narrow box.
+  final bool? isCollapsed;
+
+  // Compresses the text container vertically to optimize layout spaces across busy UI forms.
+  final bool? isDense;
+
+  // Customizes inner spacing margins between the input text content and decoration borders.
+  final EdgeInsetsGeometry? contentPadding;
+
+  // An interactive widget embedded directly inside the start of the visible text field layout box.
+  final Widget? prefixIcon;
+
+  // Sets width and height boundary rule thresholds around the inner starting decoration icon container.
+  final BoxConstraints? prefixIconConstraints;
+
+  // A persistent custom widget placed instantly ahead of the typing area inside the field container.
+  final Widget? prefix;
+
+  // Static string text anchored permanently in front of user content (e.g., currency symbols).
+  final String? prefixText;
+
+  // Style attributes configured specifically to format the leading static prefix text segment.
+  final TextStyle? prefixStyle;
+
+  // The specific color tint overlay applied exclusively to the inline starting icon widget.
+  final Color? prefixIconColor;
+
+  // An interactive widget embedded directly inside the trailing end of the text container frame.
+  final Widget? suffixIcon;
+
+  // A persistent custom widget placed permanently at the terminal end of the text typing line.
+  final Widget? suffix;
+
+  // Static string text anchored permanently behind the active user input (e.g., suffix weights).
+  final String? suffixText;
+
+  // Text style configurations applied to paint the trailing static suffix string text.
+  final TextStyle? suffixStyle;
+
+  // The specific color tint overlay applied exclusively to the inline trailing icon widget.
+  final Color? suffixIconColor;
+
+  // Sets dimensional sizing boundary constraints around the trailing terminal decoration icon box.
+  final BoxConstraints? suffixIconConstraints;
+
+  // A custom trailing character count or status tracker widget loaded underneath the border.
+  final Widget? counter;
+
+  // Static string text manually overriding automated field count systems beneath the layout.
+  final String? counterText;
+
+  // Style criteria utilized to alter text presentation properties of character limits counters.
+  final TextStyle? counterStyle;
+
+  // Toggles background color paint layers on or off behind the input text area.
+  final bool? filled;
+
+  // The specific color painted across the interior background region when filled is true.
+  final Color? fillColor;
+
+  // The background overlay highlight tone presented when mice hover frames over the field.
+  final Color? focusColor;
+
+  // The background tracking tint cast behind fields when an active computer cursor hovers adjacent.
+  final Color? hoverColor;
+
+  // The boundary line format rendered when validation errors occur while focus remains absent.
+  final InputBorder? errorBorder;
+
+  // The active border design display shown when a user interacts inside a valid field box.
+  final InputBorder? focusedBorder;
+
+  // The active highlight border configuration painted when fields focus while containing validation errors.
+  final InputBorder? focusedErrorBorder;
+
+  // The border look deployed when user interactions are locked via disabled states.
+  final InputBorder? disabledBorder;
+
+  // The standard baseline outer frame border rendered when fields sit active but unselected.
+  final InputBorder? enabledBorder;
+
+  // The catch-all default baseline border type applied if individual border instances are left unconfigured.
+  final InputBorder? border;
+
+  // Configures default interaction rules to declare if decoration presentation formats utilize active styling.
+  // final bool enabled = true;
+
+  //----------------------------
+  //Input Decoration Class Ended
+  //----------------------------
 
   // Sets the font weight, size, color, and typography of the active user text.
   final TextStyle? style;
@@ -62,7 +233,7 @@ class AppTextFormField extends StatelessWidget {
   final bool readOnly;
 
   // Toggles whether the field can be focused, tapped, or interacted with at all.
-  final bool? enabled;
+  // final bool? enabled;
 
   // Makes hit-testing gestures ignore this widget entirely and pass to widgets behind.
   final bool? ignorePointers;
@@ -259,7 +430,68 @@ class AppTextFormField extends StatelessWidget {
     this.statesController,
 
     // Styling & Visual Presentation
-    this.decoration = const InputDecoration(),
+    // this.decoration = const InputDecoration(), make more division
+
+    //--------------------------------
+    //Input decoration section Started
+    //--------------------------------
+    this.icon,
+    this.iconColor,
+    this.label,
+    this.labelText,
+    this.labelStyle,
+    this.floatingLabelStyle,
+    this.helper,
+    this.helperText,
+    this.helperStyle,
+    this.helperMaxLines,
+    this.hintText,
+    this.hint,
+    this.hintStyle,
+    this.hintTextDirection,
+    this.hintMaxLines,
+    this.hintFadeDuration,
+    this.maintainHintHeight = true,
+    this.maintainHintSize = true,
+    this.maintainLabelSize = false,
+    this.error,
+    this.errorText,
+    this.errorStyle,
+    this.errorMaxLines,
+    this.floatingLabelBehavior,
+    this.floatingLabelAlignment,
+    this.isCollapsed,
+    this.isDense,
+    this.contentPadding,
+    this.prefixIcon,
+    this.prefixIconConstraints,
+    this.prefix,
+    this.prefixText,
+    this.prefixStyle,
+    this.prefixIconColor,
+    this.suffixIcon,
+    this.suffix,
+    this.suffixText,
+    this.suffixStyle,
+    this.suffixIconColor,
+    this.suffixIconConstraints,
+    this.counter,
+    this.counterText,
+    this.counterStyle,
+    this.filled,
+    this.fillColor,
+    this.focusColor,
+    this.hoverColor,
+    this.errorBorder,
+    this.focusedBorder,
+    this.focusedErrorBorder,
+    this.disabledBorder,
+    this.enabledBorder,
+    this.border,
+
+    //------------------------------
+    //Input Decoration Section Ended
+    //------------------------------
     this.style,
     this.strutStyle,
     this.textDirection,
@@ -270,7 +502,7 @@ class AppTextFormField extends StatelessWidget {
     // Interaction & Focus Behavior
     this.autofocus = false,
     this.readOnly = false,
-    this.enabled,
+    // this.enabled,
     this.ignorePointers,
     this.canRequestFocus = true,
     this.mouseCursor,
@@ -348,7 +580,7 @@ class AppTextFormField extends StatelessWidget {
       controller: controller,
       initialValue: initialValue,
       focusNode: focusNode,
-      decoration: decoration,
+      decoration: InputDecoration(),
       keyboardType: keyboardType,
       textCapitalization: textCapitalization,
       textInputAction: textInputAction,
@@ -380,7 +612,7 @@ class AppTextFormField extends StatelessWidget {
       validator: validator,
       errorBuilder: errorBuilder,
       inputFormatters: inputFormatters,
-      enabled: enabled,
+      // enabled: enabled,
       ignorePointers: ignorePointers,
       cursorWidth: cursorWidth,
       cursorHeight: cursorHeight,
