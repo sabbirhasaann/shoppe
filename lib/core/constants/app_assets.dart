@@ -47,4 +47,9 @@ abstract class AppAssets {
   static const voucher = '$baseIcon/voucher.png';
 
   /*images */
+  static const artist = '$baseImage/artist.svg';
+  static const bag = '$baseImage/bag.svg';
+  static const bubble1 = '$baseImage/bubble1.svg';
+  static const bubble2 = '$baseImage/bubble2.svg';
+  static const bubble3 = '$baseImage/bubble3.svg';
 }
