@@ -77,7 +77,9 @@ class StartView extends StatelessWidget {
             mainAxisSize: MainAxisSize.min,
             children: [
               AppButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.of(context).pushNamed('createAccountView/');
+                },
                 label: AppStrings.startViewPrimaryButtonLable,
                 width: double.infinity,
               ),
