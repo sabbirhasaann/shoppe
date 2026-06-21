@@ -6,7 +6,7 @@ clear
 echo "===================================================="
 echo "    FLUTTER FVM ARCHITECTURE MANAGEMENT SCRIPT"
 echo "===================================================="
-echo "1. Run Application"
+echo "1. Run Application in Chrome (Debug Mode)"
 echo "2. Install Dependencies"
 echo "3. Clean Cache & Get"
 echo "4. Run Code Generation"
