@@ -3,7 +3,12 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
+/*constants */
+import 'package:shoppe/core/constants/app_text_styles.dart';
+import 'package:shoppe/core/theme/app_color_palette.dart';
+
 class AppTextFormField extends StatelessWidget {
+  final String? suffixAsset;
   // ==========================================
   // Core & Infrastructure State
   // ==========================================
@@ -421,6 +426,7 @@ class AppTextFormField extends StatelessWidget {
 
   const AppTextFormField({
     super.key,
+    this.suffixAsset,
     // Core & Infrastructure State
     this.groupId = EditableText,
     this.controller,
@@ -574,6 +580,7 @@ class AppTextFormField extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final palette = Theme.of(context).extension<AppColorPalette>()!;
     return TextFormField(
       key: key,
       groupId: groupId,
@@ -594,7 +601,11 @@ class AppTextFormField extends StatelessWidget {
         helperMaxLines: helperMaxLines,
         hintText: hintText,
         hint: hint,
-        hintStyle: hintStyle,
+
+        hintStyle: AppTextStyle.poppinsMedium14px.copyWith(
+          color: palette.grey20,
+        ),
+
         hintTextDirection: hintTextDirection,
         hintMaxLines: hintMaxLines,
         hintFadeDuration: hintFadeDuration,
@@ -608,14 +619,29 @@ class AppTextFormField extends StatelessWidget {
         floatingLabelAlignment: floatingLabelAlignment,
         isCollapsed: isCollapsed,
         isDense: isDense,
-        contentPadding: contentPadding,
+
+        contentPadding: EdgeInsets.symmetric(
+          horizontal: 20,
+          vertical: 16,
+        ),
+
         prefixIcon: prefixIcon,
         prefixIconConstraints: prefixIconConstraints,
         prefix: prefix,
         prefixText: prefixText,
         prefixStyle: prefixStyle,
         prefixIconColor: prefixIconColor,
-        suffixIcon: suffixIcon,
+        suffixIcon: suffixAsset != null
+            ? SizedBox(
+                height: 16,
+                width: 16,
+                child: Image.asset(
+                  suffixAsset!,
+                  color: Color(0xFF000000),
+                  alignment: Alignment.center,
+                ),
+              )
+            : null,
         suffix: suffix,
         suffixText: suffixText,
         suffixStyle: suffixStyle,
@@ -624,8 +650,8 @@ class AppTextFormField extends StatelessWidget {
         counter: counter,
         counterText: counterText,
         counterStyle: counterStyle,
-        filled: filled,
-        fillColor: fillColor,
+        filled: true,
+        fillColor: palette.backgroundGrey,
         focusColor: focusColor,
         hoverColor: hoverColor,
         errorBorder: errorBorder,
@@ -633,12 +659,20 @@ class AppTextFormField extends StatelessWidget {
         focusedErrorBorder: focusedErrorBorder,
         disabledBorder: disabledBorder,
         enabledBorder: enabledBorder,
-        border: border,
+
+        border: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(
+            59.29,
+          ),
+          borderSide: BorderSide.none,
+        ),
       ),
       keyboardType: keyboardType,
       textCapitalization: textCapitalization,
       textInputAction: textInputAction,
-      style: style,
+      style: AppTextStyle.poppinsMedium14px.copyWith(
+        color: palette.grey20,
+      ),
       strutStyle: strutStyle,
       textDirection: textDirection,
       textAlign: textAlign,
