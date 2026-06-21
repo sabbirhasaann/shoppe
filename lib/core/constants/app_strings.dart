@@ -9,4 +9,9 @@ abstract class AppStrings {
       'Beautiful eCommerce UI Kit for your online store';
   static const startViewPrimaryButtonLable = 'Let\'s get started';
   static const haveAccount = 'I already have an account';
+
+  /* createAccountView */
+  static const creatAccount = 'Create \nAccount';
+  static const done = 'Done';
+  static const cancel = 'Cancel';
 }
