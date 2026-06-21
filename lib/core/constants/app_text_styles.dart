@@ -15,63 +15,63 @@ abstract class AppTextStyle {
     fontSize: 50,
     fontWeight: FontWeight.bold,
     letterSpacing: -0.5,
-    height: 5.4,
+    height: 54 / 50,
   );
 
   static final ralewayBold28px = GoogleFonts.raleway(
     fontSize: 28,
     fontWeight: FontWeight.bold,
     letterSpacing: -0.28,
-    height: 3.6,
+    height: 36 / 26,
   );
 
   static final ralewayBold21px = GoogleFonts.raleway(
     fontSize: 21,
     fontWeight: FontWeight.bold,
     letterSpacing: -0.21,
-    height: 3.0,
+    height: 30 / 21,
   );
 
   static final ralewayBold15px = GoogleFonts.raleway(
     fontSize: 15,
     fontWeight: FontWeight.bold,
     letterSpacing: -0.15,
-    height: 1.9,
+    height: 19 / 15,
   );
 
   static final ralewayBold14px = GoogleFonts.raleway(
     fontSize: 14,
     fontWeight: FontWeight.bold,
     letterSpacing: -0.14,
-    height: 1.8,
+    height: 18 / 14,
   );
 
   static final ralewayMedium18px = GoogleFonts.raleway(
     fontSize: 18,
     fontWeight: FontWeight.w600,
     letterSpacing: -0.18,
-    height: 2.6,
+    height: 26 / 18,
   );
 
   static final ralewayMedium17px = GoogleFonts.raleway(
     fontSize: 17,
     fontWeight: FontWeight.w600,
     letterSpacing: -0.17,
-    height: 2.1,
+    height: 21 / 17,
   );
 
   static final ralewayMedium16px = GoogleFonts.raleway(
     fontSize: 16,
     fontWeight: FontWeight.w600,
     letterSpacing: -0.16,
-    height: 2.0,
+    height: 20 / 17,
   );
 
   static final ralewayMedium15px = GoogleFonts.raleway(
     fontSize: 15,
     fontWeight: FontWeight.w600,
     letterSpacing: -0.15,
-    height: 1.9,
+    height: 19 / 15,
   );
 
   /*NunitoSans Font*/
@@ -80,34 +80,34 @@ abstract class AppTextStyle {
     fontSize: 16,
     fontWeight: FontWeight.bold,
     letterSpacing: 1.6,
-    height: 2.5,
+    height: 25 / 16,
   );
 
   static final nunitoSansLight22px = GoogleFonts.nunitoSans(
     fontSize: 22,
     fontWeight: FontWeight.normal,
     letterSpacing: 0,
-    height: 3.1,
+    height: 31 / 22,
   );
 
   static final nunitoSansLight19px = GoogleFonts.nunitoSans(
     fontSize: 19,
     fontWeight: FontWeight.normal,
     letterSpacing: 0,
-    height: 3.3,
+    height: 33 / 19,
   );
 
   static final nunitoSansLight15px = GoogleFonts.nunitoSans(
     fontSize: 15,
     fontWeight: FontWeight.normal,
     letterSpacing: 0,
-    height: 2.6,
+    height: 26 / 15,
   );
 
   /*Poppins Font*/
   static final poppinsMedium14px = GoogleFonts.poppins(
     fontSize: 13.83,
     fontWeight: FontWeight.w500,
-    height: 1.4,
+    height: 14 / 13.83,
   );
 }
