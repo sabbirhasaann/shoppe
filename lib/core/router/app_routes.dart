@@ -3,4 +3,5 @@ abstract class AppRoutes {
   static const startView = 'startView/';
   static const createAccountView = 'createAccountView/';
   static const loginView = 'loginView/';
+  static const passwordView = 'passwordView/';
 }
