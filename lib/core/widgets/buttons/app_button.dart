@@ -109,28 +109,23 @@ class AppButton extends StatelessWidget {
     }
 
     // 4. Final Button Assembly
-    return Padding(
-      padding: const EdgeInsets.symmetric(
-        horizontal: 20,
-      ),
-      child: SizedBox(
-        width: width,
-        height: 50, // Industry standard height
-        child: ElevatedButton(
-          onPressed: (isLoading || isDisabled) ? null : onPressed,
-          style: ElevatedButton.styleFrom(
-            backgroundColor: backgroundColor,
-            foregroundColor: foregroundColor,
-            elevation: variant == ButtonVariant.primary ? 2 : 0,
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(borderRadius ?? 16),
-              side: border,
-            ),
-            disabledBackgroundColor: theme.disabledColor.withAlpha(16),
-            disabledForegroundColor: theme.disabledColor,
+    return SizedBox(
+      width: width,
+      height: 50, // Industry standard height
+      child: ElevatedButton(
+        onPressed: (isLoading || isDisabled) ? null : onPressed,
+        style: ElevatedButton.styleFrom(
+          backgroundColor: backgroundColor,
+          foregroundColor: foregroundColor,
+          elevation: variant == ButtonVariant.primary ? 2 : 0,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(borderRadius ?? 16),
+            side: border,
           ),
-          child: content,
+          disabledBackgroundColor: theme.disabledColor.withAlpha(16),
+          disabledForegroundColor: theme.disabledColor,
         ),
+        child: content,
       ),
     );
   }
