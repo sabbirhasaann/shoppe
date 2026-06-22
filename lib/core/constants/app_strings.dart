@@ -14,4 +14,9 @@ abstract class AppStrings {
   static const creatAccount = 'Create \nAccount';
   static const done = 'Done';
   static const cancel = 'Cancel';
+
+  /*loginView */
+  static const login = 'Login';
+  static const next = 'Next';
+  static const greet = 'Good to see you back!';
 }
