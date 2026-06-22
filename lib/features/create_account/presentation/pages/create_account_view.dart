@@ -74,9 +74,9 @@ class CreateAccountView extends StatelessWidget {
                     ),
                   ),
                 ),
-                
+
                 AppGap.hXL,
-          
+
                 AppTextFormField(
                   hintText: AppStrings.hintEmail,
                 ),
@@ -85,7 +85,7 @@ class CreateAccountView extends StatelessWidget {
                   hintText: AppStrings.hintPass,
                 ),
                 AppGap.hSM,
-            
+
                 AppTextFormField(
                   hintText: AppStrings.hintPhone,
                 ),
@@ -98,12 +98,16 @@ class CreateAccountView extends StatelessWidget {
         child: Padding(
           padding: const EdgeInsets.only(
             bottom: 72.0,
+            left: 20,
+            right: 20,
           ),
           child: Column(
             mainAxisSize: .min,
             children: [
               AppButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.of(context).pushReplacementNamed('loginView/');
+                },
                 label: AppStrings.done,
                 width: double.infinity,
                 variant: ButtonVariant.primary,
