@@ -19,4 +19,7 @@ abstract class AppStrings {
   static const login = 'Login';
   static const next = 'Next';
   static const greet = 'Good to see you back!';
+
+  /*passwordView */
+  static const password = 'Password';
 }
