@@ -6,6 +6,7 @@ import './app_routes.dart';
 /* pages*/
 import 'package:shoppe/features/start/presentation/pages/start_view.dart';
 import 'package:shoppe/features/create_account/presentation/pages/create_account_view.dart';
+import 'package:shoppe/features/login/presentation/pages/login_view.dart';
 
 class RouterGenerator {
   static Route<dynamic> generateRoute(RouteSettings settings) {
@@ -20,6 +21,12 @@ class RouterGenerator {
         return MaterialPageRoute(
           builder: (ctx) {
             return const CreateAccountView();
+          },
+        );
+      case AppRoutes.loginView:
+        return MaterialPageRoute(
+          builder: (ctx) {
+            return const LoginView();
           },
         );
       default:
