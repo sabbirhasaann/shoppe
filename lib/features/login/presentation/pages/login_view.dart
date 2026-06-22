@@ -77,7 +77,9 @@ class LoginView extends StatelessWidget {
                     mainAxisSize: .min,
                     children: [
                       AppButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.of(context).pushNamed('passwordView/');
+                        },
                         label: AppStrings.next,
                         width: double.infinity,
                       ),
