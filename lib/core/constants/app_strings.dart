@@ -22,4 +22,7 @@ abstract class AppStrings {
 
   /*passwordView */
   static const password = 'Password';
+  static const greetName = 'Hello, Romania!!';
+  static const typePassowrd = 'Type your password';
+  static const notYou = 'Not you?';
 }
