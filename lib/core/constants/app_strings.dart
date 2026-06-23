@@ -25,4 +25,26 @@ abstract class AppStrings {
   static const greetName = 'Hello, Romania!!';
   static const typePassowrd = 'Type your password';
   static const notYou = 'Not you?';
+
+  /* passwordRecovery View */
+  static const passwordRecovery = 'Password Recovery';
+  static const instructionVerification =
+      'Enter 4-digits code we sent you on your phone number';
+  static const instructionOptions =
+      'How you would like to restore your password?';
+  static const instructionSetPassword =
+      'Please, setup a new password for your account';
+  static const phoneNumber = '+999******00';
+  static const sendAgain = 'Send Again';
+
+  /* recoveryOptions */
+  static const sms = 'SMS';
+  static const email = 'Email';
+
+  /* setupPassword */
+  static const setNewPassword = 'Setup New Password';
+  static const setPassInstruction = 'Please, setup a new password for your account';
+  static const newPassword = 'New Password';
+  static const repeatPassword = 'Repeat Password';
+  static const save = 'Save';
 }
