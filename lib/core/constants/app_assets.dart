@@ -29,9 +29,9 @@ abstract class AppAssets {
   static const heartOutlined = '$baseIcon/heart_outlined.png';
   static const homeMark = '$baseIcon/home_mark.png';
   static const home = '$baseIcon/home.png';
-  static const iconFeatherCheck = '$baseIcon/icon feather-check.png';
-  static const iconIonicIosShareAlt = '$baseIcon/icon ionic-ios-share-alt.png';
-  static const iconMaterialEdit = '$baseIcon/icon material-edit.png';
+  static const iconFeatherCheck = '$baseIcon/feather-check.png';
+  static const iconIonicIosShareAlt = '$baseIcon/ionic-ios-share-alt.png';
+  static const iconMaterialEdit = '$baseIcon/material-edit.png';
   static const imageIcon = '$baseIcon/image Icon.png';
   static const lockBlue = '$baseIcon/lock_blue.png';
   static const menuIcon = '$baseIcon/menu Icon.png';
@@ -48,6 +48,7 @@ abstract class AppAssets {
 
   /*images */
   static const artist = '$baseImage/artist.svg';
+  static const artist1 = '$baseImage/artist.png';
   static const bag = '$baseImage/bag.svg';
   static const bubble1 = '$baseImage/bubble1.svg';
   static const bubble2 = '$baseImage/bubble2.svg';
