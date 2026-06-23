@@ -114,7 +114,11 @@ class PasswordView extends StatelessWidget {
                     ),
                     AppGap.wMD,
                     AppIconButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.of(
+                          context,
+                        ).pushNamed('passwordRecoveryView/');
+                      },
                       iconPath: AppAssets.arrowRight,
                     ),
                   ],
