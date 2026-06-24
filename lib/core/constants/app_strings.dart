@@ -51,4 +51,9 @@ abstract class AppStrings {
   static const newPassword = 'New Password';
   static const repeatPassword = 'Repeat Password';
   static const save = 'Save';
+
+  /*onboardHello */
+  static const hello = 'Hello';
+  static const onboardHelloInfo =
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non consectetur turpis. Morbi eu eleifend lacus.';
 }
