@@ -36,6 +36,9 @@ abstract class AppStrings {
       'Please, setup a new password for your account';
   static const phoneNumber = '+999******00';
   static const sendAgain = 'Send Again';
+  static const alertInfo =
+      'You reached out maximum amount of attempts. Please, try later.';
+  static const okay = 'Okay';
 
   /* recoveryOptions */
   static const sms = 'SMS';
@@ -43,7 +46,8 @@ abstract class AppStrings {
 
   /* setupPassword */
   static const setNewPassword = 'Setup New Password';
-  static const setPassInstruction = 'Please, setup a new password for your account';
+  static const setPassInstruction =
+      'Please, setup a new password for your account';
   static const newPassword = 'New Password';
   static const repeatPassword = 'Repeat Password';
   static const save = 'Save';
