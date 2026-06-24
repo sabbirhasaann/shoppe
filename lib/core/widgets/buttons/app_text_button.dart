@@ -8,17 +8,19 @@ import 'package:shoppe/core/theme/app_color_palette.dart';
 
 class AppTextButton extends StatelessWidget {
   final String label;
+  final VoidCallback onPressed;
 
   const AppTextButton({
     super.key,
     required this.label,
+    required this.onPressed,
   });
 
   @override
   Widget build(BuildContext context) {
     final palette = Theme.of(context).extension<AppColorPalette>()!;
     return TextButton(
-      onPressed: () {},
+      onPressed: onPressed,
       child: Text(
         label,
         style: AppTextStyle.nunitoSansLight15px.copyWith(
