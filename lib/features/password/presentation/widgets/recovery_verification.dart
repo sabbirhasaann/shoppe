@@ -185,6 +185,9 @@ class RecoveryVerification extends StatelessWidget {
         AppGap.hMD,
 
         AppTextButton(
+          onPressed: () {
+            Navigator.of(context).pushNamed('onboardHello/');
+          },
           label: AppStrings.cancel,
         ),
       ],
