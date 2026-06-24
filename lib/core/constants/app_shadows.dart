@@ -14,4 +14,10 @@ abstract class AppShadow {
     color: Color(0x29000000),
     spreadRadius: 0,
   );
+
+  static const BoxShadow onboardHelloShadow = BoxShadow(
+    blurRadius: 37,
+    offset: Offset(0, 10),
+    color: Color(0x29000000),
+  );
 }
