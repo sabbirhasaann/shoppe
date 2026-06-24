@@ -56,4 +56,8 @@ abstract class AppStrings {
   static const hello = 'Hello';
   static const onboardHelloInfo =
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non consectetur turpis. Morbi eu eleifend lacus.';
+
+  /*onboardReadyView */
+  static const ready = 'Ready?';
+  static const letsStart = 'Let\'s Start';
 }
