@@ -21,6 +21,7 @@ abstract class AppAssets {
   static const close = '$baseIcon/close.png';
   static const close1 = '$baseIcon/close1.png';
   static const delete = '$baseIcon/delete.png';
+  static const exclamation = '$baseIcon/exclamation.png';
   static const eyeSlash = '$baseIcon/eye-slash.png';
   static const eye = '$baseIcon/eye.png';
   static const filterIcon = '$baseIcon/filter Icon.png';
@@ -45,6 +46,7 @@ abstract class AppAssets {
   static const star = '$baseIcon/star.png';
   static const subtract = '$baseIcon/subtract.png';
   static const voucher = '$baseIcon/voucher.png';
+  
 
   /*images */
   static const artist = '$baseImage/artist.svg';
