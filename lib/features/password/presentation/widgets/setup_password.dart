@@ -63,6 +63,7 @@ class SetupPassword extends StatelessWidget {
         AppGap.hMD,
 
         AppTextButton(
+          onPressed: () {},
           label: AppStrings.cancel,
         ),
       ],

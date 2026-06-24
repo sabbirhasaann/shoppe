@@ -91,6 +91,7 @@ class _RecoveryOptionsState extends State<RecoveryOptions> {
         AppGap.hMD,
 
         AppTextButton(
+          onPressed: () {},
           label: AppStrings.cancel,
         ),
       ],

@@ -85,6 +85,7 @@ class LoginView extends StatelessWidget {
                       ),
                       AppGap.hMD,
                       AppTextButton(
+                        onPressed: () {},
                         label: AppStrings.cancel,
                       ),
                     ],
