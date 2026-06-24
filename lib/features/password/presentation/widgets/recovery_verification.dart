@@ -19,6 +19,83 @@ class RecoveryVerification extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final palette = Theme.of(context).extension<AppColorPalette>()!;
+    void _openAlert() {
+      showDialog(
+        context: context,
+        builder: (context) {
+          return AlertDialog(
+            content: Container(
+              decoration: BoxDecoration(
+                shape: .rectangle,
+                borderRadius: BorderRadius.circular(19),
+              ),
+              child: Column(
+                mainAxisSize: .min,
+                children: [
+                  Transform.translate(
+                    offset: Offset(0, -50),
+                    child: Stack(
+                      children: [
+                        Container(
+                          width: 80,
+                          height: 80,
+                          decoration: BoxDecoration(
+                            shape: .circle,
+                            color: palette.white,
+                          ),
+                          child: Center(
+                            child: Container(
+                              width: 50,
+                              height: 50,
+                              decoration: BoxDecoration(
+                                shape: .circle,
+                                color: palette.pink100,
+                              ),
+                              child: Center(
+                                child: Container(
+                                  width: 22,
+                                  height: 22,
+                                  decoration: BoxDecoration(
+                                    shape: .circle,
+                                    color: palette.pink500,
+                                    border: Border.all(
+                                      width: 3,
+                                      color: palette.white,
+                                    ),
+                                  ),
+                                  child: Image.asset(
+                                    AppAssets.exclamation,
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+
+                  Text(
+                    AppStrings.alertInfo,
+                    style: AppTextStyle.ralewayMedium18px,
+                    textAlign: .center,
+                  ),
+                  AppGap.hLG,
+                  AppButton(
+                    onPressed: () {
+                      Navigator.of(context).pop();
+                    },
+                    label: AppStrings.okay,
+                    width: 201,
+                  ),
+                ],
+              ),
+            ),
+          );
+        },
+      );
+    }
+
     return Column(
       mainAxisAlignment: .center,
 
@@ -99,7 +176,9 @@ class RecoveryVerification extends StatelessWidget {
         ),
         const Spacer(),
         AppButton(
-          onPressed: () {},
+          onPressed: () {
+            _openAlert();
+          },
           width: double.infinity,
           label: AppStrings.sendAgain,
         ),
