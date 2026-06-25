@@ -26,4 +26,11 @@ abstract class AppShadow {
     offset: Offset(0, -1),
     color: Color(0x1A000000),
   );
+
+  static const BoxShadow offset0x0y15br0sr0op = BoxShadow(
+    offset: Offset(0, 0),
+    blurRadius: 15,
+    spreadRadius: 0,
+    color: Color(0x29000000),
+  );
 }
