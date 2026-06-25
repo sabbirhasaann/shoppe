@@ -11,6 +11,7 @@ import 'package:shoppe/features/password/presentation/pages/password_view.dart';
 import 'package:shoppe/features/password/presentation/pages/password_recovery.dart';
 import 'package:shoppe/features/onboarding/presentation/pages/onboard_hello.dart';
 import 'package:shoppe/features/onboarding/presentation/pages/onboard_ready.dart';
+import 'package:shoppe/features/profile/presentation/pages/profile_view.dart';
 
 class RouterGenerator {
   static Route<dynamic> generateRoute(RouteSettings settings) {
@@ -58,6 +59,13 @@ class RouterGenerator {
             return const OnboardReady();
           },
         );
+      case AppRoutes.profileView:
+        return MaterialPageRoute(
+          builder: (ctx) {
+            return const ProfileView();
+          },
+        );
+
       default:
         return _onError();
     }
