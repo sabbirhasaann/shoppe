@@ -6,36 +6,42 @@ class AppElevationTheme extends ThemeExtension<AppElevationTheme> {
   final List<BoxShadow> cardShadow;
   final BoxShadow onboardHelloShadow;
   final BoxShadow bottomNavigationBarShadow;
+  final BoxShadow avatarShadow;
 
   const AppElevationTheme({
     required this.cardShadow,
     required this.onboardHelloShadow,
     required this.bottomNavigationBarShadow,
+    required this.avatarShadow,
   });
 
   factory AppElevationTheme.light() => const AppElevationTheme(
     cardShadow: [AppShadow.startViewCircleShadowLight],
     onboardHelloShadow: AppShadow.onboardHelloShadow,
     bottomNavigationBarShadow: AppShadow.navigationBarShadow,
+    avatarShadow: AppShadow.offset0x0y15br0sr0op,
   );
 
   factory AppElevationTheme.dark() => const AppElevationTheme(
     cardShadow: [AppShadow.startViewCircleShadowDark],
     onboardHelloShadow: AppShadow.onboardHelloShadow,
     bottomNavigationBarShadow: AppShadow.navigationBarShadow,
+    avatarShadow: AppShadow.offset0x0y15br0sr0op,
   );
 
   @override
   AppElevationTheme copyWith({
     List<BoxShadow>? cardShadow,
-    BoxShadow? onboardShadowHello,
+    BoxShadow? onboardHelloShadow,
     BoxShadow? bottomNavigationBarShadow,
+    BoxShadow? avatarShadow,
   }) {
     return AppElevationTheme(
       cardShadow: cardShadow ?? this.cardShadow,
-      onboardHelloShadow: onboardHelloShadow,
+      onboardHelloShadow: onboardHelloShadow ?? this.onboardHelloShadow,
       bottomNavigationBarShadow:
           bottomNavigationBarShadow ?? this.bottomNavigationBarShadow,
+      avatarShadow: avatarShadow ?? this.avatarShadow,
     );
   }
 
@@ -59,6 +65,8 @@ class AppElevationTheme extends ThemeExtension<AppElevationTheme> {
             t,
           ) ??
           bottomNavigationBarShadow,
+      avatarShadow:
+          BoxShadow.lerp(avatarShadow, other.avatarShadow, t) ?? avatarShadow,
     );
   }
 }
