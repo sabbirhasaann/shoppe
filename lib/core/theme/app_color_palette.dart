@@ -15,6 +15,7 @@ class AppColorPalette extends ThemeExtension<AppColorPalette> {
   final Color white;
   final Color grey20;
   final Color backgroundGrey;
+  final Color green;
 
   const AppColorPalette({
     required this.primary,
@@ -30,6 +31,7 @@ class AppColorPalette extends ThemeExtension<AppColorPalette> {
     required this.white,
     required this.grey20,
     required this.backgroundGrey,
+    required this.green,
   });
 
   @override
@@ -53,6 +55,7 @@ class AppColorPalette extends ThemeExtension<AppColorPalette> {
       white: Color.lerp(white, other.white, t)!,
       grey20: Color.lerp(grey20, other.grey20, t)!,
       backgroundGrey: Color.lerp(backgroundGrey, other.backgroundGrey, t)!,
+      green: Color.lerp(green, other.green, t)!,
     );
   }
 }
