@@ -50,6 +50,7 @@ abstract class AppAssets {
   /*images */
   static const artist = '$baseImage/artist.svg';
   static const artist1 = '$baseImage/artist.png';
+  static const avatar = '$baseImage/avatar.png';
   static const bag = '$baseImage/bag.svg';
   static const bubble1 = '$baseImage/bubble1.svg';
   static const bubble2 = '$baseImage/bubble2.svg';
