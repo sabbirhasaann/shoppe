@@ -20,4 +20,10 @@ abstract class AppShadow {
     offset: Offset(0, 10),
     color: Color(0x29000000),
   );
+
+  static const BoxShadow navigationBarShadow = BoxShadow(
+    blurRadius: 1,
+    offset: Offset(0, -1),
+    color: Color(0x1A000000),
+  );
 }
