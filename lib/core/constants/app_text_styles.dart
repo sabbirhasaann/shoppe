@@ -76,6 +76,13 @@ abstract class AppTextStyle {
 
   /*NunitoSans Font*/
 
+  static final nunitoSansRegular10px = GoogleFonts.nunitoSans(
+    fontSize: 10,
+    fontWeight: FontWeight.normal,
+    letterSpacing: 0,
+    height: 15 / 10,
+  );
+
   static final nunitoSansBold16px = GoogleFonts.nunitoSans(
     fontSize: 16,
     fontWeight: FontWeight.bold,
