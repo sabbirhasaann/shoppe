@@ -102,7 +102,11 @@ class OnboardReady extends StatelessWidget {
                           ),
                           AppGap.hXL,
                           AppButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.of(
+                                context,
+                              ).pushReplacementNamed('profileView/');
+                            },
                             label: AppStrings.letsStart,
                             width: 201,
                           ),
