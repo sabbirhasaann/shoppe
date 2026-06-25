@@ -50,11 +50,54 @@ abstract class AppAssets {
   /*images */
   static const artist = '$baseImage/artist.svg';
   static const artist1 = '$baseImage/artist.png';
+
   static const avatar = '$baseImage/avatar.png';
+  static const avatar2 = '$baseImage/avatar_2.png';
+  static const avatar3 = '$baseImage/avatar_3.png';
+  static const avatar4 = '$baseImage/avatar_4.png';
+  static const avatar5 = '$baseImage/avatar_5.png';
+  static const avatar6 = '$baseImage/avatar_6.png';
+
+  static const bag1 = '$baseImage/bag_1.png';
+  static const bag2 = '$baseImage/bag_2.png';
+  static const bag3 = '$baseImage/bag_3.png';
+  static const bag4 = '$baseImage/bag_4.png';
   static const bag = '$baseImage/bag.svg';
+
   static const bubble1 = '$baseImage/bubble1.svg';
   static const bubble2 = '$baseImage/bubble2.svg';
   static const bubble3 = '$baseImage/bubble3.svg';
+
+  static const clothing1 = '$baseImage/clothing_1.png';
+  static const clothing2 = '$baseImage/clothing_2.png';
+  static const clothing3 = '$baseImage/clothing_3.png';
+  static const clothing4 = '$baseImage/clothing_4.png';
+
+  static const hoodies1 = '$baseImage/hoodies_1.png';
+  static const hoodies2 = '$baseImage/hoodies_2.png';
+  static const hoodies3 = '$baseImage/hoodies_3.png';
+  static const hoodies4 = '$baseImage/hoodies_4.png';
+
+  static const lingerie1 = '$baseImage/lingerie_1.png';
+  static const lingerie2 = '$baseImage/lingerie_2.png';
+  static const lingerie3 = '$baseImage/lingerie_3.png';
+  static const lingerie4 = '$baseImage/lingerie_4.png';
+
   static const onboardHello = '$baseImage/onboard_hello.png';
   static const onboardReady = '$baseImage/onboard_ready.png';
+
+  static const shoes1 = '$baseImage/shoes_1.png';
+  static const shoes2 = '$baseImage/shoes_2.png';
+  static const shoes3 = '$baseImage/shoes_3.png';
+  static const shoes4 = '$baseImage/shoes_4.png';
+
+  static const story1 = '$baseImage/story_1.png';
+  static const story2 = '$baseImage/story_2.png';
+  static const story3 = '$baseImage/story_3.png';
+  static const story4 = '$baseImage/story_4.png';
+
+  static const watch1 = '$baseImage/watch_1.png';
+  static const watch2 = '$baseImage/watch_2.png';
+  static const watch3 = '$baseImage/watch_3.png';
+  static const watch4 = '$baseImage/watch_4.png';
 }
