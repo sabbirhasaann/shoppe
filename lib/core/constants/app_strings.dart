@@ -60,4 +60,18 @@ abstract class AppStrings {
   /*onboardReadyView */
   static const ready = 'Ready?';
   static const letsStart = 'Let\'s Start';
+
+  /*appbar */
+  static const myActivity = 'My Activity';
+
+  /*profileView */
+  static const helloRomina = 'Hello, Romina!';
+  static const announcement = 'Announcement';
+  static const announcementInfo =
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas hendrerit luctus libero ac vulputate.';
+  static const recentlyViewed = 'Recently Viewed';
+  static const myOrder = 'My Orders';
+  static const toPay = 'To Pay';
+  static const toReceieve = 'To Receive';
+  static const toReview = 'To Review';
 }
