@@ -10,10 +10,13 @@ import 'package:shoppe/core/constants/app_assets.dart';
 import 'package:shoppe/core/theme/app_color_palette.dart';
 import 'package:shoppe/core/theme/app_elevation_theme.dart';
 
-/*widgets */
+/*shared widgets */
 import 'package:shoppe/core/widgets/navigations/app_bottom_navigation_bar.dart';
 import 'package:shoppe/core/widgets/navigations/app_appbar.dart';
 import 'package:shoppe/core/widgets/buttons/app_icon_button.dart';
+
+/*widgets */
+import 'package:shoppe/features/profile/presentation/widgets/new_items.dart';
 
 class ProfileView extends StatelessWidget {
   const ProfileView({super.key});
@@ -36,6 +39,13 @@ class ProfileView extends StatelessWidget {
       AppStrings.toReview,
     ];
 
+    final List<String> _stories = [
+      AppAssets.story1,
+      AppAssets.story2,
+      AppAssets.story3,
+      AppAssets.story4,
+    ];
+
     return Scaffold(
       backgroundColor: palette.white,
       appBar: PreferredSize(
@@ -43,135 +53,179 @@ class ProfileView extends StatelessWidget {
         child: AppAppBar(),
       ),
       body: SingleChildScrollView(
-        child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 20.0),
-          child: Column(
-            crossAxisAlignment: .start,
-            children: [
-              AppGap.hLG,
-              Text(
-                AppStrings.helloRomina,
-                style: AppTextStyle.ralewayBold28px,
+        child: Column(
+          crossAxisAlignment: .start,
+          children: [
+            Padding(
+              padding: const EdgeInsets.symmetric(
+                horizontal: 20.0,
               ),
-              AppGap.hMD,
-              Container(
-                padding: const EdgeInsets.symmetric(
-                  horizontal: AppSpacing.md,
-                  vertical: AppSpacing.sm,
-                ),
-                decoration: BoxDecoration(
-                  shape: BoxShape.rectangle,
-                  color: palette.backgroundGrey,
-                  borderRadius: BorderRadius.circular(10),
-                ),
-                child: Column(
-                  mainAxisAlignment: .center,
-                  crossAxisAlignment: .start,
-                  children: [
-                    Text(
-                      AppStrings.announcement,
-                      style: AppTextStyle.ralewayBold14px,
+              child: Column(
+                crossAxisAlignment: .start,
+                children: [
+                  AppGap.hLG,
+                  Text(
+                    AppStrings.helloRomina,
+                    style: AppTextStyle.ralewayBold28px,
+                  ),
+                  AppGap.hMD,
+                  Container(
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: AppSpacing.md,
+                      vertical: AppSpacing.sm,
                     ),
-                    Row(
-                      children: [
-                        Expanded(
-                          child: Text(
-                            AppStrings.announcementInfo,
-                            style: AppTextStyle.nunitoSansRegular10px,
-                          ),
-                        ),
-                        AppGap.wLG,
-                        AppIconButton(
-                          onPressed: () {},
-                          iconPath: AppAssets.arrowRight,
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
-              ),
-
-              AppGap.hMD,
-              Text(
-                AppStrings.recentlyViewed,
-                style: AppTextStyle.ralewayBold21px,
-              ),
-              AppGap.hSM,
-              Row(
-                mainAxisAlignment: .spaceBetween,
-                children: List.generate(_appAssets.length, (index) {
-                  return Container(
-                    height: 60,
-                    width: 60,
                     decoration: BoxDecoration(
-                      shape: BoxShape.circle,
-                      border: Border.all(
-                        width: 4,
-                        color: palette.white,
-                      ),
-                      boxShadow: [
-                        elevation.avatarShadow,
-                      ],
-                      image: DecorationImage(
-                        image: AssetImage(
-                          _appAssets[index],
-                        ),
-                      ),
+                      shape: BoxShape.rectangle,
+                      color: palette.backgroundGrey,
+                      borderRadius: BorderRadius.circular(10),
                     ),
-                  );
-                }),
-              ),
+                    child: Column(
+                      mainAxisAlignment: .center,
+                      crossAxisAlignment: .start,
+                      children: [
+                        Text(
+                          AppStrings.announcement,
+                          style: AppTextStyle.ralewayBold14px,
+                        ),
+                        Row(
+                          children: [
+                            Expanded(
+                              child: Text(
+                                AppStrings.announcementInfo,
+                                style: AppTextStyle.nunitoSansRegular10px,
+                              ),
+                            ),
+                            AppGap.wLG,
+                            AppIconButton(
+                              onPressed: () {},
+                              iconPath: AppAssets.arrowRight,
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
 
-              AppGap.hLG,
-              Text(
-                AppStrings.myOrder,
-                style: AppTextStyle.ralewayBold21px,
-              ),
-              AppGap.hMD,
-              Row(
-                mainAxisAlignment: .spaceBetween,
-                children: List.generate(_orders.length, (index) {
-                  return Stack(
-                    children: [
-                      Container(
-                        padding: const EdgeInsets.symmetric(
-                          horizontal: AppSpacing.lg,
-                          vertical: AppSpacing.sm,
-                        ),
+                  AppGap.hMD,
+                  Text(
+                    AppStrings.recentlyViewed,
+                    style: AppTextStyle.ralewayBold21px,
+                  ),
+                  AppGap.hSM,
+                  Row(
+                    mainAxisAlignment: .spaceBetween,
+                    children: List.generate(_appAssets.length, (index) {
+                      return Container(
+                        height: 60,
+                        width: 60,
                         decoration: BoxDecoration(
-                          shape: BoxShape.rectangle,
-                          borderRadius: BorderRadius.circular(18),
-                          color: palette.lightPeriwinkle,
-                        ),
-                        child: Text(
-                          _orders[index],
-                          style: AppTextStyle.ralewayMedium16px.copyWith(
-                            color: palette.primary,
+                          shape: BoxShape.circle,
+                          border: Border.all(
+                            width: 4,
+                            color: palette.white,
                           ),
-                        ),
-                      ),
-                      Positioned(
-                        right: 0,
-                        top: 0,
-                        child: CircleAvatar(
-                          radius: 7,
-                          backgroundColor: palette.white,
-                          child: Container(
-                            height: 12,
-                            width: 12,
-                            decoration: BoxDecoration(
-                              shape: BoxShape.circle,
-                              color: palette.green,
+                          boxShadow: [
+                            elevation.avatarShadow,
+                          ],
+                          image: DecorationImage(
+                            image: AssetImage(
+                              _appAssets[index],
                             ),
                           ),
                         ),
-                      ),
-                    ],
-                  );
-                }),
+                      );
+                    }),
+                  ),
+
+                  AppGap.hLG,
+                  Text(
+                    AppStrings.myOrder,
+                    style: AppTextStyle.ralewayBold21px,
+                  ),
+                  AppGap.hMD,
+                  Row(
+                    mainAxisAlignment: .spaceBetween,
+                    children: List.generate(_orders.length, (index) {
+                      return Stack(
+                        children: [
+                          Container(
+                            padding: const EdgeInsets.symmetric(
+                              horizontal: AppSpacing.lg,
+                              vertical: AppSpacing.sm,
+                            ),
+                            decoration: BoxDecoration(
+                              shape: BoxShape.rectangle,
+                              borderRadius: BorderRadius.circular(18),
+                              color: palette.lightPeriwinkle,
+                            ),
+                            child: Text(
+                              _orders[index],
+                              style: AppTextStyle.ralewayMedium16px.copyWith(
+                                color: palette.primary,
+                              ),
+                            ),
+                          ),
+                          Positioned(
+                            right: 0,
+                            top: 0,
+                            child: CircleAvatar(
+                              radius: 7,
+                              backgroundColor: palette.white,
+                              child: Container(
+                                height: 12,
+                                width: 12,
+                                decoration: BoxDecoration(
+                                  shape: BoxShape.circle,
+                                  color: palette.green,
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
+                      );
+                    }),
+                  ),
+                  AppGap.hLG,
+                  Text(
+                    AppStrings.stories,
+                    style: AppTextStyle.ralewayBold21px,
+                  ),
+                ],
               ),
-            ],
-          ),
+            ),
+            AppGap.hSM,
+            SizedBox(
+              height: 175,
+              child: ListView.builder(
+                scrollDirection: Axis.horizontal,
+                itemCount: _stories.length,
+                itemBuilder: (context, index) {
+                  return Padding(
+                    padding: EdgeInsets.only(
+                      left: index == 0 ? 20 : 0,
+                      right: AppSpacing.xs,
+                    ),
+                    child: SizedBox(
+                      height: 175,
+                      width: 104,
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(20),
+                        child: Image.asset(
+                          _stories[index],
+                          fit: BoxFit.cover,
+                          alignment: .center,
+                        ),
+                      ),
+                    ),
+                  );
+                },
+              ),
+            ),
+
+            AppGap.hLG,
+
+            NewItems(),
+          ],
         ),
       ),
       bottomNavigationBar: AppBottomNavigationBar(),
