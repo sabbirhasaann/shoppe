@@ -74,4 +74,11 @@ abstract class AppStrings {
   static const toPay = 'To Pay';
   static const toReceieve = 'To Receive';
   static const toReview = 'To Review';
+  static const stories = 'Stories';
+
+  /* widgets new item */
+  static const newItem = 'New Item';
+  static const seeAll = 'See All';
+  static const newProductInfo = 'Lorem ipsum dolor sit amet consectetur.';
+  static const newProductPrice = '\$1,700';
 }
