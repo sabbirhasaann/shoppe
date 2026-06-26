@@ -86,6 +86,10 @@ abstract class AppAssets {
   static const onboardHello = '$baseImage/onboard_hello.png';
   static const onboardReady = '$baseImage/onboard_ready.png';
 
+  static const product1 = '$baseImage/product_1.png';
+  static const product2 = '$baseImage/product_2.png';
+  static const product3 = '$baseImage/product_3.png';
+
   static const shoes1 = '$baseImage/shoes_1.png';
   static const shoes2 = '$baseImage/shoes_2.png';
   static const shoes3 = '$baseImage/shoes_3.png';
