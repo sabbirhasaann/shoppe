@@ -27,10 +27,16 @@ abstract class AppShadow {
     color: Color(0x1A000000),
   );
 
-  static const BoxShadow offset0x0y15br0sr0op = BoxShadow(
+  static const BoxShadow offset0x0y15br0sr16op = BoxShadow(
     offset: Offset(0, 0),
     blurRadius: 15,
     spreadRadius: 0,
     color: Color(0x29000000),
+  );
+
+  static const BoxShadow offset0x5y10br0sr10op = BoxShadow(
+    offset: Offset(0, 5),
+    blurRadius: 10,
+    color: Color(0x1A000000),
   );
 }
