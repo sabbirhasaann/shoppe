@@ -7,26 +7,29 @@ class AppElevationTheme extends ThemeExtension<AppElevationTheme> {
   final BoxShadow onboardHelloShadow;
   final BoxShadow bottomNavigationBarShadow;
   final BoxShadow avatarShadow;
-
+  final BoxShadow newItemShadow;
   const AppElevationTheme({
     required this.cardShadow,
     required this.onboardHelloShadow,
     required this.bottomNavigationBarShadow,
     required this.avatarShadow,
+    required this.newItemShadow,
   });
 
   factory AppElevationTheme.light() => const AppElevationTheme(
     cardShadow: [AppShadow.startViewCircleShadowLight],
     onboardHelloShadow: AppShadow.onboardHelloShadow,
     bottomNavigationBarShadow: AppShadow.navigationBarShadow,
-    avatarShadow: AppShadow.offset0x0y15br0sr0op,
+    avatarShadow: AppShadow.offset0x0y15br0sr16op,
+    newItemShadow: AppShadow.offset0x5y10br0sr10op,
   );
 
   factory AppElevationTheme.dark() => const AppElevationTheme(
     cardShadow: [AppShadow.startViewCircleShadowDark],
     onboardHelloShadow: AppShadow.onboardHelloShadow,
     bottomNavigationBarShadow: AppShadow.navigationBarShadow,
-    avatarShadow: AppShadow.offset0x0y15br0sr0op,
+    avatarShadow: AppShadow.offset0x0y15br0sr16op,
+    newItemShadow: AppShadow.offset0x5y10br0sr10op,
   );
 
   @override
@@ -35,6 +38,7 @@ class AppElevationTheme extends ThemeExtension<AppElevationTheme> {
     BoxShadow? onboardHelloShadow,
     BoxShadow? bottomNavigationBarShadow,
     BoxShadow? avatarShadow,
+    BoxShadow? newItemShadow,
   }) {
     return AppElevationTheme(
       cardShadow: cardShadow ?? this.cardShadow,
@@ -42,6 +46,7 @@ class AppElevationTheme extends ThemeExtension<AppElevationTheme> {
       bottomNavigationBarShadow:
           bottomNavigationBarShadow ?? this.bottomNavigationBarShadow,
       avatarShadow: avatarShadow ?? this.avatarShadow,
+      newItemShadow: newItemShadow ?? this.newItemShadow,
     );
   }
 
@@ -67,6 +72,9 @@ class AppElevationTheme extends ThemeExtension<AppElevationTheme> {
           bottomNavigationBarShadow,
       avatarShadow:
           BoxShadow.lerp(avatarShadow, other.avatarShadow, t) ?? avatarShadow,
+      newItemShadow:
+          BoxShadow.lerp(newItemShadow, other.newItemShadow, t) ??
+          newItemShadow,
     );
   }
 }
