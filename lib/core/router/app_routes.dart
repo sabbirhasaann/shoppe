@@ -8,4 +8,5 @@ abstract class AppRoutes {
   static const onboardHello = 'onboardHello/';
   static const onboardReadyView = 'onboardReadyView/';
   static const profileView = 'profileView/';
+  static const shopView = 'shopView/';
 }

@@ -56,6 +56,10 @@ class _AppBottomNavigationBarState extends State<AppBottomNavigationBar> {
                 setState(() {
                   currentIndex = index;
                 });
+
+                if (currentIndex == 0) {
+                  Navigator.of(context).pushReplacementNamed('shopView/');
+                }
               },
               child: Column(
                 mainAxisSize: .min,

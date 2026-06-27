@@ -111,4 +111,7 @@ abstract class AppStrings {
 
   /*widget just for you */
   static const justForYou = 'Just For You';
+
+  /*shopView */
+  static const shop = 'Shop';
 }
