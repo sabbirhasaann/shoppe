@@ -88,4 +88,15 @@ abstract class AppStrings {
   static const neW = 'New';
   static const sale = 'Sale';
   static const hot = 'Hot';
+
+  /* widget categories */
+  static const categories = 'Categories';
+  static const clothing = 'Clothing';
+  static const shoes = 'Shoes';
+  static const bags = 'Bags';
+  static const lingerie = 'Lingerie';
+  static const c109 = '109';
+  static const c530 = '530';
+  static const c87 = '87';
+  static const c218 = '218';
 }
