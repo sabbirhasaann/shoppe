@@ -79,10 +79,13 @@ class MostPopularItem extends StatelessWidget {
                   mainAxisSize: .min,
 
                   children: [
-                    Image.asset(
-                      _mostPopular[index],
-                      height: 103,
-                      width: 94,
+                    ClipRRect(
+                      borderRadius: BorderRadius.circular(5),
+                      child: Image.asset(
+                        _mostPopular[index],
+                        height: 103,
+                        width: 94,
+                      ),
                     ),
                     AppGap.hSM,
 
@@ -94,13 +97,10 @@ class MostPopularItem extends StatelessWidget {
                           style: AppTextStyle.ralewayBold15px,
                         ),
                         const SizedBox(width: 1),
-                        ClipRRect(
-                          borderRadius: BorderRadius.circular(8),
-                          child: Image.asset(
-                            AppAssets.heartFilled,
-                            height: 11,
-                            width: 11,
-                          ),
+                        Image.asset(
+                          AppAssets.heartFilled,
+                          height: 11,
+                          width: 11,
                         ),
                         AppGap.wMD,
                         Text(
