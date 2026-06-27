@@ -108,4 +108,7 @@ abstract class AppStrings {
 
   /*widgets top product*/
   static const topProduct = 'Top Product';
+
+  /*widget just for you */
+  static const justForYou = 'Just For You';
 }
