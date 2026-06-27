@@ -99,4 +99,10 @@ abstract class AppStrings {
   static const c530 = '530';
   static const c87 = '87';
   static const c218 = '218';
+
+  /* widget flash sale*/
+  static const flashSale = 'Flash Sale';
+  static const c00 = '00';
+  static const c36 = '36';
+  static const c58 = '58';
 }
