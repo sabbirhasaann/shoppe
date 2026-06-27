@@ -81,6 +81,13 @@ abstract class AppTextStyle {
     height: 19 / 15,
   );
 
+  static final ralewayMedium13px = GoogleFonts.raleway(
+    fontSize: 13,
+    fontWeight: FontWeight.w600,
+    letterSpacing: -0.13,
+    height: 17 / 13,
+  );
+
   /*NunitoSans Font*/
 
   static final nunitoSansRegular10px = GoogleFonts.nunitoSans(
