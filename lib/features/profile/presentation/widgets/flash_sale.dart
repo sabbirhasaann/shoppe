@@ -98,6 +98,7 @@ class FlashSale extends StatelessWidget {
                   borderRadius: BorderRadius.circular(5),
                   child: Image.asset(
                     item,
+                    fit: BoxFit.cover,
                   ),
                 ),
               );
