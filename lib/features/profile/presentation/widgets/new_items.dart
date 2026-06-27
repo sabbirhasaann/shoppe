@@ -6,19 +6,14 @@ import 'package:shoppe/core/constants/app_text_styles.dart';
 import 'package:shoppe/core/constants/app_assets.dart';
 import 'package:shoppe/core/constants/app_spacing.dart';
 
-/*theme */
-import 'package:shoppe/core/theme/app_color_palette.dart';
-import 'package:shoppe/core/theme/app_elevation_theme.dart';
-
 /*widgets */
 import 'package:shoppe/core/widgets/buttons/app_icon_button.dart';
+import 'package:shoppe/core/widgets/cards/item_card.dart';
 
 class NewItems extends StatelessWidget {
   const NewItems({super.key});
   @override
   Widget build(BuildContext context) {
-    final palette = Theme.of(context).extension<AppColorPalette>()!;
-    final elevation = Theme.of(context).extension<AppElevationTheme>()!;
     final List<String> _newItems = [
       AppAssets.product1,
       AppAssets.product2,
@@ -58,46 +53,10 @@ class NewItems extends StatelessWidget {
                 margin: EdgeInsets.only(
                   left: index == 0 ? 20 : 0,
                 ),
-                child: Column(
-                  mainAxisSize: .min,
-                  crossAxisAlignment: .start,
-                  children: [
-                    Container(
-                      padding: const EdgeInsets.all(4),
-                      margin: EdgeInsets.only(
-                        right: 8,
-                      ),
-                      clipBehavior: Clip.antiAlias,
-                      decoration: BoxDecoration(
-                        shape: BoxShape.rectangle,
-                        borderRadius: BorderRadius.circular(5),
-                        color: palette.white,
-                        boxShadow: [
-                          elevation.newItemShadow,
-                        ],
-                      ),
-
-                      child: Image.asset(
-                        _newItems[index],
-                        height: 130,
-                        width: 130,
-                      ),
-                    ),
-
-                    AppGap.hXS,
-
-                    Text(
-                      AppStrings.newProductInfo,
-                      style: AppTextStyle.nunitoSansRegular12px,
-                    ),
-
-                    AppGap.hXS,
-
-                    Text(
-                      AppStrings.newProductPrice,
-                      style: AppTextStyle.ralewayBold17px,
-                    ),
-                  ],
+                child: ItemCard(
+                  imagePath: _newItems[index],
+                  height: 130,
+                  width: 130,
                 ),
               );
             },
