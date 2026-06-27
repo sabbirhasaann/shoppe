@@ -19,6 +19,7 @@ import 'package:shoppe/core/widgets/buttons/app_icon_button.dart';
 import 'package:shoppe/features/profile/presentation/widgets/new_items.dart';
 import 'package:shoppe/features/profile/presentation/widgets/most_popular_item.dart';
 import 'package:shoppe/features/profile/presentation/widgets/categories_item.dart';
+import 'package:shoppe/features/profile/presentation/widgets/flash_sale.dart';
 
 class ProfileView extends StatelessWidget {
   const ProfileView({super.key});
@@ -235,6 +236,12 @@ class ProfileView extends StatelessWidget {
             AppGap.hLG,
 
             CategoriesItem(),
+
+            AppGap.hLG,
+
+            FlashSale(),
+
+            AppGap.hLG,
           ],
         ),
       ),
