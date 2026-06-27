@@ -81,4 +81,11 @@ abstract class AppStrings {
   static const seeAll = 'See All';
   static const newProductInfo = 'Lorem ipsum dolor sit amet consectetur.';
   static const newProductPrice = '\$1,700';
+
+  /* widget most_popular_item*/
+  static const mostPopular = 'Most Popular';
+  static const popular = '1780';
+  static const neW = 'New';
+  static const sale = 'Sale';
+  static const hot = 'Hot';
 }
