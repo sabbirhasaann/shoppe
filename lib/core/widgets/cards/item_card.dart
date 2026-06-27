@@ -49,6 +49,7 @@ class ItemCard extends StatelessWidget {
             imagePath,
             height: height,
             width: width,
+            fit: BoxFit.cover,
           ),
         ),
 
