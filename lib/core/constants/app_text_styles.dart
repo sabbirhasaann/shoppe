@@ -53,6 +53,12 @@ abstract class AppTextStyle {
     height: 18 / 14,
   );
 
+  static final ralewayBold12px = GoogleFonts.raleway(
+    fontSize: 12,
+    fontWeight: FontWeight.bold,
+    letterSpacing: -0.15,
+    height: 21 / 12,
+  );
   static final ralewayMedium18px = GoogleFonts.raleway(
     fontSize: 18,
     fontWeight: FontWeight.w600,
