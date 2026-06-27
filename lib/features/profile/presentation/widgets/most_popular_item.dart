@@ -115,7 +115,6 @@ class MostPopularItem extends StatelessWidget {
             },
           ),
         ),
-        AppGap.hLG,
       ],
     );
   }
