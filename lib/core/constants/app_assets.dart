@@ -92,6 +92,11 @@ abstract class AppAssets {
   static const product4 = '$baseImage/product_4.png';
   static const product5 = '$baseImage/product_5.png';
   static const product6 = '$baseImage/product_6.png';
+  static const product7 = '$baseImage/product_7.png';
+  static const product8 = '$baseImage/product_8.png';
+  static const product9 = '$baseImage/product_9.png';
+  static const product10 = '$baseImage/product_10.png';
+  static const product11 = '$baseImage/product_11.png';
 
   static const shoes1 = '$baseImage/shoes_1.png';
   static const shoes2 = '$baseImage/shoes_2.png';
