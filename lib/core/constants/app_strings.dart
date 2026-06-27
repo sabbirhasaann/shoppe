@@ -105,4 +105,7 @@ abstract class AppStrings {
   static const c00 = '00';
   static const c36 = '36';
   static const c58 = '58';
+
+  /*widgets top product*/
+  static const topProduct = 'Top Product';
 }
