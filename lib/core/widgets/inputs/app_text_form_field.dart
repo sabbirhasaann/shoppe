@@ -637,7 +637,7 @@ class AppTextFormField extends StatelessWidget {
                 width: 16,
                 child: Image.asset(
                   suffixAsset!,
-                  color: Color(0xFF000000),
+                  color: suffixIconColor,
                   alignment: Alignment.center,
                 ),
               )
