@@ -114,4 +114,5 @@ abstract class AppStrings {
 
   /*shopView */
   static const shop = 'Shop';
+  static const search = 'Search';
 }
