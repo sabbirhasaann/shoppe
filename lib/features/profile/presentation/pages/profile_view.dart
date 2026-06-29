@@ -25,7 +25,7 @@ import 'package:shoppe/core/widgets/components/most_popular_item.dart';
 import 'package:shoppe/core/widgets/cards/categories_item.dart';
 import 'package:shoppe/core/widgets/components/flash_sale.dart';
 import 'package:shoppe/features/profile/presentation/widgets/top_products.dart';
-import 'package:shoppe/features/profile/presentation/widgets/just_for_you.dart';
+import 'package:shoppe/core/widgets/components/just_for_you.dart';
 
 class ProfileView extends StatelessWidget {
   const ProfileView({super.key});
