@@ -15,12 +15,92 @@ import 'package:shoppe/core/theme/app_color_palette.dart';
 
 /*widgets */
 import 'package:shoppe/features/shop/presentation/widgets/sliding_images.dart';
+import 'package:shoppe/core/widgets/cards/categories_item.dart';
 
 class ShopView extends StatelessWidget {
   const ShopView({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final List<Map<String, Map<String, dynamic>>> _categories = [
+      {
+        "cat": {
+          "name": AppStrings.clothing,
+          "counts": AppStrings.c109,
+          "items": [
+            AppAssets.clothing1,
+            AppAssets.clothing2,
+            AppAssets.clothing3,
+            AppAssets.clothing4,
+          ],
+        },
+      },
+
+      {
+        "cat": {
+          "name": AppStrings.shoes,
+          "counts": AppStrings.c530,
+          "items": [
+            AppAssets.shoes1,
+            AppAssets.shoes2,
+            AppAssets.shoes3,
+            AppAssets.shoes4,
+          ],
+        },
+      },
+
+      {
+        "cat": {
+          "name": AppStrings.bags,
+          "counts": AppStrings.c87,
+          "items": [
+            AppAssets.bag1,
+            AppAssets.bag2,
+            AppAssets.bag3,
+            AppAssets.bag4,
+          ],
+        },
+      },
+
+      {
+        "cat": {
+          "name": AppStrings.lingerie,
+          "counts": AppStrings.c218,
+          "items": [
+            AppAssets.lingerie1,
+            AppAssets.lingerie2,
+            AppAssets.lingerie3,
+            AppAssets.lingerie4,
+          ],
+        },
+      },
+
+      {
+        "cat": {
+          "name": AppStrings.watch,
+          "counts": AppStrings.c218,
+          "items": [
+            AppAssets.watch1,
+            AppAssets.watch2,
+            AppAssets.watch3,
+            AppAssets.watch4,
+          ],
+        },
+      },
+      {
+        "cat": {
+          "name": AppStrings.hoodies,
+          "counts": AppStrings.c218,
+          "items": [
+            AppAssets.hoodies1,
+            AppAssets.hoodies2,
+            AppAssets.hoodies3,
+            AppAssets.hoodies4,
+          ],
+        },
+      },
+    ];
+
     final palette = Theme.of(context).extension<AppColorPalette>()!;
     return Scaffold(
       backgroundColor: palette.white,
@@ -54,16 +134,26 @@ class ShopView extends StatelessWidget {
           ),
         ),
       ),
-      body: Column(
-        children: [
-          AppPageViewBuilder(
-            widget: [
-              SlidingImages(),
-              SlidingImages(),
-              SlidingImages(),
-            ],
-          ),
-        ],
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            AppPageViewBuilder(
+              widget: [
+                SlidingImages(),
+                SlidingImages(),
+                SlidingImages(),
+              ],
+            ),
+
+            const SizedBox(
+              height: 19,
+            ),
+
+            CategoriesItem(
+              categories: _categories,
+            ),
+          ],
+        ),
       ),
     );
   }
