@@ -8,12 +8,17 @@ import 'package:shoppe/core/constants/app_assets.dart';
 
 /*shared widget*/
 import 'package:shoppe/core/widgets/inputs/app_text_form_field.dart';
+import 'package:shoppe/core/widgets/builders/app_page_view_builder.dart';
 
 /*theme */
 import 'package:shoppe/core/theme/app_color_palette.dart';
 
+/*widgets */
+import 'package:shoppe/features/shop/presentation/widgets/sliding_images.dart';
+
 class ShopView extends StatelessWidget {
   const ShopView({super.key});
+
   @override
   Widget build(BuildContext context) {
     final palette = Theme.of(context).extension<AppColorPalette>()!;
@@ -26,6 +31,7 @@ class ShopView extends StatelessWidget {
             left: 20,
             right: 20,
             top: 40,
+            bottom: 20,
           ),
           child: Row(
             children: [
@@ -48,10 +54,16 @@ class ShopView extends StatelessWidget {
           ),
         ),
       ),
-      body: Center(
-        child: Text(
-          AppStrings.shop,
-        ),
+      body: Column(
+        children: [
+          AppPageViewBuilder(
+            widget: [
+              SlidingImages(),
+              SlidingImages(),
+              SlidingImages(),
+            ],
+          ),
+        ],
       ),
     );
   }
