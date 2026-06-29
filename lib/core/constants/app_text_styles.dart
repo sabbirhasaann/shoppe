@@ -18,6 +18,13 @@ abstract class AppTextStyle {
     height: 54 / 50,
   );
 
+  static final ralewayBold29px = GoogleFonts.raleway(
+    fontSize: 29,
+    fontWeight: FontWeight.bold,
+    letterSpacing: -0.29,
+    height: 36 / 29,
+  );
+
   static final ralewayBold28px = GoogleFonts.raleway(
     fontSize: 28,
     fontWeight: FontWeight.bold,
@@ -59,6 +66,14 @@ abstract class AppTextStyle {
     letterSpacing: -0.15,
     height: 21 / 12,
   );
+
+  static final ralewayBold11px = GoogleFonts.raleway(
+    fontSize: 11,
+    fontWeight: FontWeight.bold,
+    letterSpacing: -0.11,
+    height: 15 / 11,
+  );
+
   static final ralewayMedium18px = GoogleFonts.raleway(
     fontSize: 18,
     fontWeight: FontWeight.w600,
@@ -108,6 +123,13 @@ abstract class AppTextStyle {
     fontWeight: FontWeight.normal,
     letterSpacing: 0,
     height: 16 / 12,
+  );
+
+  static final nunitoSansBold12px = GoogleFonts.nunitoSans(
+    fontSize: 12,
+    fontWeight: FontWeight.bold,
+    letterSpacing: 0,
+    height: 18 / 12,
   );
 
   static final nunitoSansBold16px = GoogleFonts.nunitoSans(
