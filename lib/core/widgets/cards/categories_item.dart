@@ -14,65 +14,18 @@ import 'package:shoppe/core/theme/app_elevation_theme.dart';
 import 'package:shoppe/core/widgets/buttons/app_icon_button.dart';
 
 class CategoriesItem extends StatelessWidget {
-  const CategoriesItem({super.key});
+  final List<Map<String, Map<String, dynamic>>> categories;
+
+  const CategoriesItem({
+    super.key,
+    required this.categories,
+  });
+
   @override
   Widget build(BuildContext context) {
     final palette = Theme.of(context).extension<AppColorPalette>()!;
     final elevation = Theme.of(context).extension<AppElevationTheme>()!;
 
-    final List<Map<String, Map<String, dynamic>>> _categories = [
-      {
-        "cat": {
-          "name": AppStrings.clothing,
-          "counts": AppStrings.c109,
-          "items": [
-            AppAssets.clothing1,
-            AppAssets.clothing2,
-            AppAssets.clothing3,
-            AppAssets.clothing4,
-          ],
-        },
-      },
-
-      {
-        "cat": {
-          "name": AppStrings.shoes,
-          "counts": AppStrings.c530,
-          "items": [
-            AppAssets.shoes1,
-            AppAssets.shoes2,
-            AppAssets.shoes3,
-            AppAssets.shoes4,
-          ],
-        },
-      },
-
-      {
-        "cat": {
-          "name": AppStrings.bags,
-          "counts": AppStrings.c87,
-          "items": [
-            AppAssets.bag1,
-            AppAssets.bag2,
-            AppAssets.bag3,
-            AppAssets.bag4,
-          ],
-        },
-      },
-
-      {
-        "cat": {
-          "name": AppStrings.lingerie,
-          "counts": AppStrings.c218,
-          "items": [
-            AppAssets.lingerie1,
-            AppAssets.lingerie2,
-            AppAssets.lingerie3,
-            AppAssets.lingerie4,
-          ],
-        },
-      },
-    ];
     return Column(
       children: [
         Padding(
@@ -112,9 +65,9 @@ class CategoriesItem extends StatelessWidget {
             childAspectRatio: 0.82,
           ),
 
-          itemCount: _categories.length,
+          itemCount: categories.length,
           itemBuilder: (context, index) {
-            final category = _categories[index]["cat"];
+            final category = categories[index]["cat"];
             return Container(
               padding: const EdgeInsets.all(8),
               decoration: BoxDecoration(
@@ -153,7 +106,7 @@ class CategoriesItem extends StatelessWidget {
                   Row(
                     children: [
                       Text(
-                        _categories[index]["cat"]!["name"],
+                        categories[index]["cat"]!["name"],
                         style: AppTextStyle.ralewayBold17px,
                       ),
                       const Spacer(),
@@ -166,7 +119,7 @@ class CategoriesItem extends StatelessWidget {
                           color: palette.backgroundGrey,
                         ),
                         child: Text(
-                          _categories[index]["cat"]!["counts"],
+                          categories[index]["cat"]!["counts"],
                           style: AppTextStyle.ralewayBold12px,
                         ),
                       ),
@@ -181,50 +134,3 @@ class CategoriesItem extends StatelessWidget {
     );
   }
 }
-
-
-// Column(
-//                   mainAxisSize: .min,
-//                   children: [
-//                     Expanded(
-//                       child: GridView.builder(
-//                         shrinkWrap: true,
-//                         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-//                           crossAxisCount: 2,
-//                         ),
-//                         itemCount: 4,
-//                         itemBuilder: (context, index) {
-//                           return ClipRRect(
-//                             borderRadius: BorderRadius.circular(5),
-//                             child: Image.asset(
-//                               AppAssets.product1,
-//                               height: 75,
-//                               width: 75,
-//                             ),
-//                           );
-//                         },
-//                       ),
-//                     ),
-//                     Row(
-//                       children: [
-//                         Text(
-//                           _categories[index],
-//                           style: AppTextStyle.ralewayBold17px,
-//                         ),
-
-//                         const Spacer(),
-
-//                         Container(
-//                           padding: const EdgeInsets.all(4),
-//                           decoration: BoxDecoration(
-//                             color: palette.backgroundGrey,
-//                           ),
-//                           child: Text(
-//                             AppStrings.popular,
-//                             style: AppTextStyle.ralewayBold12px,
-//                           ),
-//                         ),
-//                       ],
-//                     ),
-//                   ],
-//                 ),
