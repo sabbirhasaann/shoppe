@@ -118,4 +118,6 @@ abstract class AppStrings {
   static const bigSale = 'Big Sale';
   static const upto50percent = 'Up to 50%';
   static const happyNow = 'Happening \nNow';
+  static const watch = 'Watch';
+  static const hoodies = 'Hoodies';
 }
