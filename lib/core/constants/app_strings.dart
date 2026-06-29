@@ -115,4 +115,7 @@ abstract class AppStrings {
   /*shopView */
   static const shop = 'Shop';
   static const search = 'Search';
+  static const bigSale = 'Big Sale';
+  static const upto50percent = 'Up to 50%';
+  static const happyNow = 'Happening \nNow';
 }
