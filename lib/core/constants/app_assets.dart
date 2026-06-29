@@ -114,4 +114,6 @@ abstract class AppAssets {
   static const watch2 = '$baseImage/watch_2.png';
   static const watch3 = '$baseImage/watch_3.png';
   static const watch4 = '$baseImage/watch_4.png';
+
+  static const shopImage = '$baseImage/shop_image.png';
 }
