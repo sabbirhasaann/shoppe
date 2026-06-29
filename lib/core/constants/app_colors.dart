@@ -4,6 +4,8 @@ abstract class AppColors {
   static const primary = Color(0xFF004CFF);
   static const black = Color(0xFF000000);
   static const yellow = Color(0xFFECA61B);
+  static const yellow300 = Color(0xFFFFD471);
+  static const yellow400 = Color(0xFFF1B11C);
   static const periwinkle = Color(0xFFCCD9F9);
   static const lightPeriwinkle = Color(0xFFE5EBFC);
   static const pink100 = Color(0xFFFFEBEB);
