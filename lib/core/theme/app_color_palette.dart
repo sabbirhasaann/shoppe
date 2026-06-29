@@ -5,6 +5,8 @@ class AppColorPalette extends ThemeExtension<AppColorPalette> {
   final Color primary;
   final Color black;
   final Color yellow;
+  final Color yellow300;
+  final Color yellow400;
   final Color periwinkle;
   final Color lightPeriwinkle;
   final Color pink100;
@@ -21,6 +23,8 @@ class AppColorPalette extends ThemeExtension<AppColorPalette> {
     required this.primary,
     required this.black,
     required this.yellow,
+    required this.yellow300,
+    required this.yellow400,
     required this.periwinkle,
     required this.lightPeriwinkle,
     required this.pink100,
@@ -45,6 +49,8 @@ class AppColorPalette extends ThemeExtension<AppColorPalette> {
       primary: Color.lerp(primary, other.primary, t)!,
       black: Color.lerp(black, other.black, t)!,
       yellow: Color.lerp(yellow, other.yellow, t)!,
+      yellow300: Color.lerp(yellow300, other.yellow300, t)!,
+      yellow400: Color.lerp(yellow400, other.yellow400, t)!,
       periwinkle: Color.lerp(periwinkle, other.periwinkle, t)!,
       lightPeriwinkle: Color.lerp(lightPeriwinkle, other.lightPeriwinkle, t)!,
       pink100: Color.lerp(pink100, other.pink100, t)!,
