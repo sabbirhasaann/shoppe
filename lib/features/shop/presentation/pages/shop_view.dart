@@ -15,7 +15,15 @@ import 'package:shoppe/core/theme/app_color_palette.dart';
 
 /*widgets */
 import 'package:shoppe/features/shop/presentation/widgets/sliding_images.dart';
+
+/*shared widget*/
 import 'package:shoppe/core/widgets/cards/categories_item.dart';
+import 'package:shoppe/core/widgets/components/top_products.dart';
+import 'package:shoppe/core/widgets/components/flash_sale.dart';
+import 'package:shoppe/core/widgets/components/just_for_you.dart';
+import 'package:shoppe/core/widgets/components/most_popular_item.dart';
+import 'package:shoppe/core/widgets/navigations/app_bottom_navigation_bar.dart';
+
 
 class ShopView extends StatelessWidget {
   const ShopView({super.key});
@@ -152,9 +160,30 @@ class ShopView extends StatelessWidget {
             CategoriesItem(
               categories: _categories,
             ),
+
+            AppGap.hLG,
+
+            TopProducts(),
+
+            AppGap.hLG,
+
+            FlashSale(),
+
+            AppGap.hLG,
+
+            MostPopularItem(),
+
+            AppGap.hLG,
+
+            TopProducts(),
+
+            AppGap.hLG,
+
+            JustForYou(),
           ],
         ),
       ),
+      bottomNavigationBar: AppBottomNavigationBar(),
     );
   }
 }
